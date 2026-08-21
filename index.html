@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Botão Misterioso</title>
+
+<style>
+body{
+    margin:0;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    background:linear-gradient(45deg,#000428,#004e92);
+    font-family:Arial,sans-serif;
+    color:white;
+    text-align:center;
+}
+
+button{
+    padding:15px 30px;
+    font-size:20px;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+    background:white;
+    color:#004e92;
+    transition:0.3s;
+}
+
+button:hover{
+    transform:scale(1.1);
+}
+
+#mensagem{
+    margin-top:30px;
+    font-size:28px;
+    max-width:600px;
+}
+</style>
+</head>
+<body>
+
+<h1>🔮 Botão Misterioso</h1>
+
+<button onclick="surpresa()">
+    Clique Aqui
+</button>
+
+<div id="mensagem"></div>
+
+<script>
+function surpresa(){
+    const mensagens = [
+        "😈 Você agora está me devendo o cu.",
+        "🥳 Você tem direito a um pedido!",
+        "😍 Eu te amo muuuuuiiiiiito!!",
+        "😘Mal posso esperar pra te encher de beijos amanhã.",
+        "🫠 Você é a mulher mais linda do universo.",
+        "🫣 Admita que você só toma banho nos sábados.",
+        "🤔O que você mais gosta em mim?",
+        "👸🏻 Você é minha princesa!!!"
+    ];
+
+    const sorteio = mensagens[Math.floor(Math.random() * mensagens.length)];
+
+    document.getElementById("mensagem").innerHTML = sorteio;
+}
+</script>
+
+</body>
+</html>
